@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "documents-mcp-server"
+version = "0.1.0"
+description = "MCP server for reading and visually analyzing local documents (PDF, Excel, CSV, Word, PowerPoint, images). No API keys required — works with GitHub Copilot and any MCP-compatible AI host."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Juan Esteban Mosquera" }]
+keywords = ["mcp", "documents", "pdf", "excel", "copilot", "vscode"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "pandas>=2.0",
+    "pdfplumber>=0.10",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+docx = ["python-docx>=1.0"]
+pptx = ["python-pptx>=0.6"]
+ocr = ["pytesseract>=0.3", "Pillow>=10.0"]
+all = [
+    "python-docx>=1.0",
+    "python-pptx>=0.6",
+    "pytesseract>=0.3",
+    "Pillow>=10.0",
+]
+
+[project.scripts]
+documents-mcp-server = "documents_mcp_server:server.run"
+
+[project.urls]
+Repository = "https://github.com/LunarPerovskite/documents-mcp-server"

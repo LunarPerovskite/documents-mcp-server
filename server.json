@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.LunarPerovskite/document-analyzer",
+  "description": "Read and visually analyze local documents (PDF, Excel, CSV, Word, PowerPoint, images). No API keys required — works with GitHub Copilot directly.",
+  "repository": {
+    "url": "https://github.com/LunarPerovskite/documents-mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "documents-mcp-server",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
