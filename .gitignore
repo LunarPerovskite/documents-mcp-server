@@ -7,3 +7,5 @@ build/
 *.egg-info/
 .env
 .mcpregistry_*
+node_modules/
+*.tgz

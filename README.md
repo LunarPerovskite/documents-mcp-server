@@ -40,6 +40,14 @@ Search for **docalyze** in the MCP server gallery (Extensions sidebar → MCP ta
 pip install docalyze-mcp-server
 ```
 
+### From npm
+
+```bash
+npx docalyze-mcp-server
+```
+
+This requires [uv](https://docs.astral.sh/uv/) or pipx installed — the npm wrapper calls `uvx` to run the Python package automatically.
+
 ### Manual setup
 
 Add to your VS Code `mcp.json` (or `settings.json`):
